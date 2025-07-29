@@ -1,0 +1,3 @@
+//! Quickcontrol layout
+
+mod bar;

@@ -8,9 +8,7 @@ fn main() -> Result<(), iced_layershell::Error> {
     AsediaShell::run(Settings {
         layer_settings: LayerShellSettings {
             anchor: Anchor::Left | Anchor::Right | Anchor::Bottom,
-            layer: Layer::Top,
-            exclusive_zone: 400,
-            size: Some((0, 400)),
+            layer: Layer::Bottom,
             start_mode: StartMode::TargetScreen(String::from("eDP-1")),
             ..Default::default()
         },

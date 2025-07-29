@@ -3,6 +3,11 @@ name = "asedia-shell"
 version = "0.1.0"
 edition = "2024"
 
+[lints.clippy]
+pedantic = "warn"
+
 [dependencies]
-iced = "0.13.1"
+battery = "0.7.8"
+iced = { version = "0.13.1", features = ["tokio"] }
 iced_layershell = "0.13.7"
+time = "0.3.41"
