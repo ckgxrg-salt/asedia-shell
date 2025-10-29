@@ -18,10 +18,9 @@
         nativeBuildInputs = with pkgs; [
           cargo
           rustc
+          rust-analyzer
           clippy
           rustfmt
-          deadnix
-          nixfmt-rfc-style
         ];
 
         buildInputs = with pkgs; [

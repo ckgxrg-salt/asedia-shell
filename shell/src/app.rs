@@ -2,7 +2,7 @@
 
 use iced::widget::button;
 use iced::{Color, Event, Subscription, Task, Theme};
-use iced_layershell::{Appearance, Application, to_layer_message};
+use iced_layershell::{Appearance, to_layer_message};
 
 pub struct AsediaShell {}
 
@@ -13,32 +13,27 @@ pub enum Message {
     IcedEvent(Event),
 }
 
-impl Application for AsediaShell {
-    type Executor = iced::executor::Default;
-    type Message = Message;
-    type Flags = ();
-    type Theme = Theme;
-
-    fn new(_flags: Self::Flags) -> (Self, Task<Message>) {
+impl AsediaShell {
+    pub fn new(_flags: ()) -> (Self, Task<Message>) {
         (Self {}, Task::none())
     }
 
-    fn namespace(&self) -> String {
+    pub fn namespace(&self) -> String {
         String::from("asedia-shell")
     }
 
-    fn style(&self, theme: &Self::Theme) -> iced_layershell::Appearance {
+    pub fn style(&self, theme: &Theme) -> iced_layershell::Appearance {
         Appearance {
             background_color: Color::TRANSPARENT,
             text_color: theme.palette().text,
         }
     }
 
-    fn subscription(&self) -> Subscription<Message> {
+    pub fn subscription(&self) -> Subscription<Message> {
         iced::event::listen().map(Message::IcedEvent)
     }
 
-    fn update(&mut self, message: Message) -> Task<Message> {
+    pub fn update(&mut self, message: Message) -> Task<Message> {
         match message {
             Message::IcedEvent(_event) => {
                 println!("event");
