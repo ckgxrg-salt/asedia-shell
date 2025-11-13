@@ -1,11 +1,11 @@
-# Plan for asedia-shell
+# Plan for daywatch-shell
 
 ## Style
 
 Should be done in single colour themed with respect to current system base16 scheme.
 Write a stylix module for this.
 
-## Binary - asedia-shell
+## Binary - daywatch-shell
 
 This is the main interface that will run as a daemon.
 
@@ -50,10 +50,10 @@ Also shows the button to call launchpad.
 ### Launchpad
 
 An application launcher, lists all possible applications in a grid with a search bar above for fuzzy search.
-When clicked on, use the WM to summon the application to avoid child process on asedia-shell.
+When clicked on, use the WM to summon the application to avoid child process on daywatch-shell.
 Will not automatically switch workspaces.
 
-## Binary - asedia-logout
+## Binary - daywatch-logout
 
 This is executable, will show up when called.
 
@@ -66,10 +66,10 @@ Five buttons:
 - Lock
 - Logout
 
-And a line in the centre that displays either `Asedia` or the action names.
+And a line in the centre that displays either `Daywatch` or the action names.
 Actions need to be confirmed.
 
-## Binary - asedia-lock
+## Binary - daywatch-lock
 
 This is executable, will show up when called and runs until unlocked.
 

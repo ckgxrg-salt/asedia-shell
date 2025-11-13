@@ -21,7 +21,7 @@ pub enum LogoutAction {
 impl Display for LogoutAction {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match *self {
-            Self::None => write!(f, "Asedia"),
+            Self::None => write!(f, "Daywatch"),
             Self::Poweroff => write!(f, "Power off"),
             Self::Reboot => write!(f, "Reboot"),
             Self::Suspend => write!(f, "Suspend"),
@@ -55,7 +55,7 @@ impl LogoutWindow {
 
     #[must_use]
     pub fn namespace(&self) -> String {
-        String::from("asedia-logout")
+        String::from("daywatch-logout")
     }
 
     pub fn subscription(&self) -> Subscription<Message> {

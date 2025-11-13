@@ -2,7 +2,7 @@ use iced_layershell::build_pattern::{MainSettings, application};
 use iced_layershell::reexport::Anchor;
 use iced_layershell::settings::{LayerShellSettings, StartMode};
 
-use asedia_logout::app::LogoutWindow;
+use daywatch_logout::app::LogoutWindow;
 
 fn main() -> Result<(), iced_layershell::Error> {
     application(

@@ -13,7 +13,7 @@
     in
     {
       devShells.${system}.default = pkgs.mkShell rec {
-        name = "asedia-shell";
+        name = "daywatch-shell";
 
         nativeBuildInputs = with pkgs; [
           cargo

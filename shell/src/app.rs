@@ -4,7 +4,7 @@ use iced::widget::button;
 use iced::{Color, Event, Subscription, Task, Theme};
 use iced_layershell::{Appearance, to_layer_message};
 
-pub struct AsediaShell {}
+pub struct DaywatchShell {}
 
 #[to_layer_message]
 #[derive(Debug, Clone)]
@@ -13,13 +13,13 @@ pub enum Message {
     IcedEvent(Event),
 }
 
-impl AsediaShell {
+impl DaywatchShell {
     pub fn new(_flags: ()) -> (Self, Task<Message>) {
         (Self {}, Task::none())
     }
 
     pub fn namespace(&self) -> String {
-        String::from("asedia-shell")
+        String::from("daywatch-shell")
     }
 
     pub fn style(&self, theme: &Theme) -> iced_layershell::Appearance {
