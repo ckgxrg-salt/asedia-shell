@@ -19,7 +19,7 @@ impl DaywatchShell {
     }
 
     pub fn namespace(&self) -> String {
-        String::from("daywatch-shell")
+        String::from("dwsh-shell")
     }
 
     pub fn style(&self, theme: &Theme) -> iced_layershell::Appearance {

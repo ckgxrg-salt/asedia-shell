@@ -5,6 +5,8 @@
 Should be done in single colour themed with respect to current system base16 scheme.
 Write a stylix module for this.
 
+The `base16` library is used to parse this.
+
 ## Binary - daywatch-shell
 
 This is the main interface that will run as a daemon.
@@ -25,6 +27,12 @@ Divided to a 3-row grid.
 (2, 1) contains MPD controls
 (2, 2) contains weather powered by wego
 (2, 3) contains the system tray
+
+Add a pomodoro widget that do this:
+- 45-min cycle
+- Input task name and press enter to begin
+- After 45min, choose to continue another 45min or take 10min rest and switch task
+- End cycle prematurely, take 10min rest and switch task
 
 ### Quickcontrol Panel
 

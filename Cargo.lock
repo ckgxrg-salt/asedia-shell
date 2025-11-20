@@ -843,32 +843,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "daywatch-lock"
-version = "0.1.0"
-dependencies = [
- "iced",
- "iced_layershell",
-]
-
-[[package]]
-name = "daywatch-logout"
-version = "0.1.0"
-dependencies = [
- "iced",
- "iced_layershell",
-]
-
-[[package]]
-name = "daywatch-shell"
-version = "0.1.0"
-dependencies = [
- "battery",
- "chrono",
- "iced",
- "iced_layershell",
-]
-
-[[package]]
 name = "dconf_rs"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -980,6 +954,40 @@ checksum = "fd39dde40b6e196c2e8763f23d119ddb1a8714534bf7d77fa97a65b0feda3986"
 dependencies = [
  "libc",
  "linux-raw-sys 0.6.5",
+]
+
+[[package]]
+name = "dwsh-lock"
+version = "0.1.0"
+dependencies = [
+ "iced",
+ "iced_layershell",
+]
+
+[[package]]
+name = "dwsh-logout"
+version = "0.1.0"
+dependencies = [
+ "iced",
+ "iced_layershell",
+]
+
+[[package]]
+name = "dwsh-main"
+version = "0.1.0"
+dependencies = [
+ "battery",
+ "chrono",
+ "iced",
+ "iced_layershell",
+]
+
+[[package]]
+name = "dwsh-utils"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "toml",
 ]
 
 [[package]]
@@ -2980,6 +2988,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde_spanned"
+version = "1.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e24345aa0fe688594e73770a5f6d1b216508b4f93484c0026d521acd30134392"
+dependencies = [
+ "serde_core",
+]
+
+[[package]]
 name = "sha1"
 version = "0.10.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3306,6 +3323,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "toml"
+version = "0.9.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f0dc8b1fb61449e27716ec0e1bdf0f6b8f3e8f6b05391e8497b8b6d7804ea6d8"
+dependencies = [
+ "indexmap",
+ "serde_core",
+ "serde_spanned",
+ "toml_datetime",
+ "toml_parser",
+ "toml_writer",
+ "winnow",
+]
+
+[[package]]
 name = "toml_datetime"
 version = "0.7.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3334,6 +3366,12 @@ checksum = "c0cbe268d35bdb4bb5a56a2de88d0ad0eb70af5384a99d648cd4b3d04039800e"
 dependencies = [
  "winnow",
 ]
+
+[[package]]
+name = "toml_writer"
+version = "1.0.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "df8b2b54733674ad286d16267dcfc7a71ed5c776e4ac7aa3c3e2561f7c637bf2"
 
 [[package]]
 name = "tracing"

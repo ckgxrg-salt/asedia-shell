@@ -1,5 +1,5 @@
 use iced::widget::{button, column, row, text};
-use iced::{Element, Event, Subscription, Task};
+use iced::{Alignment, Element, Event, Length, Subscription, Task};
 use iced_layershell::to_layer_message;
 use std::fmt::Display;
 
@@ -55,7 +55,7 @@ impl LogoutWindow {
 
     #[must_use]
     pub fn namespace(&self) -> String {
-        String::from("daywatch-logout")
+        String::from("dwsh-logout")
     }
 
     pub fn subscription(&self) -> Subscription<Message> {
@@ -95,6 +95,8 @@ impl LogoutWindow {
                 button("lock").on_press(Message::SelectAction(LogoutAction::Lock)),
             ]
         ]
+        .align_x(Alignment::Center)
+        .width(Length::Fill)
         .into()
     }
 }

@@ -1,5 +1,5 @@
 [package]
-name = "daywatch-logout"
+name = "dwsh-logout"
 version = "0.1.0"
 edition = "2024"
 

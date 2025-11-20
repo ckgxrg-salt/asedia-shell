@@ -2,7 +2,7 @@ use iced_layershell::build_pattern::{MainSettings, application};
 use iced_layershell::reexport::Anchor;
 use iced_layershell::settings::{LayerShellSettings, StartMode};
 
-use daywatch_logout::app::LogoutWindow;
+use dwsh_logout::app::LogoutWindow;
 
 fn main() -> Result<(), iced_layershell::Error> {
     application(
@@ -10,6 +10,8 @@ fn main() -> Result<(), iced_layershell::Error> {
         LogoutWindow::update,
         LogoutWindow::view,
     )
+    // TODO: Temporary
+    .theme(|_| iced::Theme::TokyoNight)
     .subscription(LogoutWindow::subscription)
     .settings(MainSettings {
         layer_settings: LayerShellSettings {

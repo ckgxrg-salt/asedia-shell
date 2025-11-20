@@ -1,4 +1,4 @@
-use daywatch_shell::app::DaywatchShell;
+use dwsh_main::app::DaywatchShell;
 
 use iced_layershell::Application;
 use iced_layershell::reexport::{Anchor, Layer};
